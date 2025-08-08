@@ -68,7 +68,7 @@ To run this project locally, follow these steps:
     ```
 
 2.  **Set up your API Key:**
-    - Get an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    - Get an API key
     - This project loads the key from the environment. In a local development environment (like the one provided by `pnpm start`), it will automatically load from a `.env` file. Create this file in the project root:
       ```
       # .env
