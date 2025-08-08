@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIDIAN - AI MIDI Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#1A1A1A',
+              'panel-bg': '#2A2A2E',
+              'control-bg': '#38383D',
+              'control-border': '#4D4D52',
+              'text-light': '#EAEAEB',
+              'text-muted': '#88888E',
+              primary: '#F97316', 
+              'primary-hover': '#EA580C',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.25rem; /* 20px */
+        height: 1.25rem; /* 20px */
+        background-color: #F97316;
+        cursor: pointer;
+        border-radius: 9999px;
+        margin-top: -6px; /* Vertically center thumb */
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      input[type="range"]:hover::-webkit-slider-thumb {
+        background-color: #EA580C;
+      }
+      input[type="range"]::-moz-range-thumb {
+        width: 1.25rem; /* 20px */
+        height: 1.25rem; /* 20px */
+        background-color: #F97316;
+        cursor: pointer;
+        border-radius: 9999px;
+        border: none;
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      input[type="range"]:hover::-moz-range-thumb {
+        background-color: #EA580C;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "tone": "https://esm.sh/tone@^15.1.22",
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0",
+    "@tonejs/midi": "https://esm.sh/@tonejs/midi@^2.0.28",
+    "jszip": "https://esm.sh/jszip@^3.10.1",
+    "file-saver": "https://esm.sh/file-saver@^2.0.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
